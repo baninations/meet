@@ -4,7 +4,7 @@ Meet is a serverless, progressive web application (PWA) with React, including da
 
 # Use of serverless on the Meet App
 We will use serverless to authenticate users so that they can view events in their cities.
-The serverless function will request the Auth URL and then the consent screen will be returned when the user grants consent an authorzation code will be returned to the serverless function then the function will request an access token with the correct autorization code, then the Access token will be granted back to the function so the function can carry out the user's request to get the events from google calender api
+The serverless function will request the Auth URL and then the consent screen will be returned when the user grants consent an authorzation code will be returned to the serverless function then the function will request an access token with the correct autorization code, then the Access token will be granted back to the function so the function can carry out the user's request to get the events from google calender api.
 
 ## Key Features
 

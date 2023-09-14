@@ -1,4 +1,5 @@
 // src/components/EventList.js
+import "../App.css";
 
 import Event from "./Event";
 

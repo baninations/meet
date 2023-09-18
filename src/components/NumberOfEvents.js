@@ -1,9 +1,24 @@
 import "../App.css";
+import { ErrorAlert } from "./Alert";
 
-const NumberOfEvents = ({ setCurrentNOE }) => {
+const NumberOfEvents = ({ setCurrentNOE, setErrorAlert }) => {
   const handleInputChanged = (event) => {
     const value = event.target.value;
-    setCurrentNOE(value);
+    switch (true) {
+      case isNaN(value):
+        setErrorAlert("value is not a number");
+        break;
+      case value > 50:
+        setErrorAlert("maximum value is 50");
+        break;
+      case value <= 0:
+        setErrorAlert("Min value is 1");
+        break;
+      default:
+        setCurrentNOE(value);
+        setErrorAlert("");
+        break;
+    }
   };
 
   return (

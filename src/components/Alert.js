@@ -11,17 +11,20 @@ class Alert extends Component {
 
   getStyle = () => {
     return {
-      color: this.color,
+      color: this.textColor,
       backgroundColor: this.bgColor,
-      borderWidth: "2px",
-      borderStyle: "solid",
-      fontWeight: "bolder",
-      borderRadius: "7px",
-      borderColor: this.color,
+      borderWidth: "3px",
+      borderStyle: "dotted",
+      borderColor: this.borderColor,
+      borderRadius: "10px",
       textAlign: "center",
-      fontSize: "12px",
-      margin: "10px 0",
-      padding: "10px",
+      fontSize: "14px",
+      margin: "15px 0",
+      padding: "12px",
+      boxShadow: "3px 3px 5px 0 rgba(0,0,0,0.3)",
+      textTransform: "uppercase",
+      letterSpacing: "2px",
+      fontFamily: "Arial, sans-serif",
     };
   };
 

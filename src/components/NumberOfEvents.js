@@ -6,10 +6,10 @@ const NumberOfEvents = ({ setCurrentNOE, setErrorAlert }) => {
     const value = event.target.value;
     switch (true) {
       case isNaN(value):
-        setErrorAlert("value is not a number");
+        setErrorAlert("Please only enter a number");
         break;
-      case value > 50:
-        setErrorAlert("maximum value is 50");
+      case value > 32:
+        setErrorAlert("maximum value is 32");
         break;
       case value <= 0:
         setErrorAlert("Min value is 1");

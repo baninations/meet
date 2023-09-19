@@ -3,8 +3,7 @@ import CitySearch from "./components/CitySearch";
 import NumberOfEvents from "./components/NumberOfEvents";
 import { useState, useEffect } from "react";
 import { getEvents, extractLocations } from "./api";
-import { InfoAlert } from "./components/Alert";
-import { ErrorAlert } from "./components/Alert";
+import { InfoAlert, WarningAlert, ErrorAlert } from "./components/Alert";
 
 import "./App.css";
 
@@ -15,6 +14,7 @@ const App = () => {
   const [currentCity, setCurrentCity] = useState("See all cities");
   const [infoAlert, setInfoAlert] = useState("");
   const [errorAlert, setErrorAlert] = useState("");
+  const [warningAlert, setWarningAlert] = useState("");
 
   const fetchData = async () => {
     const allEvents = await getEvents();
@@ -27,6 +27,13 @@ const App = () => {
   };
 
   useEffect(() => {
+    if (navigator.onLine) {
+      setWarningAlert("");
+    } else {
+      setWarningAlert(
+        "You are currently viewing cached data, once you're online again you'll get the up-to-date data again"
+      );
+    }
     fetchData();
   }, [currentCity, currentNOE]);
 
@@ -35,6 +42,7 @@ const App = () => {
       <div className="alert-container">
         {infoAlert.length ? <InfoAlert text={infoAlert} /> : null}
         {errorAlert.length ? <ErrorAlert text={errorAlert} /> : null}
+        {warningAlert.length ? <WarningAlert text={warningAlert} /> : null}
       </div>
       <NumberOfEvents
         setCurrentNOE={setCurrentNOE}

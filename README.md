@@ -15,6 +15,13 @@ Serverless is used to authenticate users, allowing them to view events in their 
 - Add App Shortcut to the Home Screen.
 - Display Charts Visualizing Event Details.
 
+## How to install
+
+- Clone the repository: git clone https://github.com/baninations/meet.git
+- Navigate to the project directory using the CLI or Terminal: cd meet
+- Install dependencies: npm install
+- Develop and run the project: npm start
+
 ## User Stories
 
 - As a user, I would like to be able to filter events by city so that I can see the list of events that take place in that city.

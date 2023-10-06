@@ -91,3 +91,10 @@ You can use it to get events in a city near you.
 ### Feature 6: Display Charts Visualizing Event Details
 
 **Scenario 1:** Show a chart with the number of upcoming events in each city.
+
+## Screenshots
+
+ ![Desktop](https://github.com/baninations/meet/blob/main/screenshots/Desktop.png)
+
+
+![Mobile](https://github.com/baninations/meet/blob/main/screenshots/Mobile.png)

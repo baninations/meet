@@ -6,6 +6,29 @@ Meet is a serverless, progressive web application (PWA) built with React. It inc
 
 Serverless is used to authenticate users, allowing them to view events in their cities. The serverless function handles the entire authentication process, from requesting the Auth URL to obtaining the access token. This enables users to access event data from the Google Calendar API seamlessly.
 
+## Overview
+
+Meet is a serverless, progressive web application (PWA) built with React. It includes data visualization using a test-driven development (TDD) technique and leverages the Google Calendar API to fetch upcoming events.
+You can use it to get events in a city near you.
+
+## Live
+- https://baninations.github.io/meet
+
+## Technlogies used
+- Javascript
+- Test driven development
+- Serverless functions
+- Unit testing
+- Integration testing
+- User acceptance
+- End to end testing
+- CI/CD
+- Progressive web applications(PWA)
+- Data Visualization
+- AWS
+- Calender API
+- OAuth 2
+
 ## Key Features
 
 - Filter Events by City.
